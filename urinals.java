@@ -91,6 +91,7 @@ public class urinals {
         try {
             FileReader fr = new FileReader("C:\\Users\\hp\\Desktop\\SER 515\\Assignment-2-Ind\\SER-515-Praneeth-Reddy-K\\TextFiles\\BuyerInfo.txt");
             FileWriter fWriter = new FileWriter("C:\\Users\\hp\\Desktop\\SER 515\\Assignment-2-Ind\\SER-515-Praneeth-Reddy-K\\javafiles\\SER-515-UnitTest\\rule1.txt");
+            //File f=new File();
             BufferedReader br = new BufferedReader(fr);
             BufferedWriter bw= new BufferedWriter(fWriter);
             String st;
@@ -109,18 +110,24 @@ public class urinals {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        System.out.println("File created Successfully");
         return i;
     }
     public static void main(String[] args) throws Exception
     {
         urinals u= new urinals();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The string");
-        String str= sc.nextLine();
-        int x= u.countUrinals(str);
-        int z=u.openFile();
-        System.out.println(x);
-        System.out.println(z);
-
+        System.out.println("For Input from keyboard enter 0 For Input from files enter 1");
+        int opt=sc.nextInt();
+        if(opt==0) {
+            System.out.println("Enter The string");
+            String str = sc.next();
+            int x = u.countUrinals(str);
+            System.out.println(x);
+        }
+        else {
+            int z=u.openFile();
+            System.out.println(z);
+        }
     }
 }
