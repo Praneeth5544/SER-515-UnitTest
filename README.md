@@ -21,6 +21,7 @@ I have implemented Following functionalities
 Execution
 
 ->Execute the main function urinals.java
-->Enter input 1 for File input 2 for Keyboard input
-->
+->Enter input 1 for File input 0 for Keyboard input
+->If input is 0 then enter string
+->If input is 1 then file gets readed and returns output file with max vacancies
   
